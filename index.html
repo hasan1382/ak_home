@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <meta name="description" content="آک هوم دکوراسیون">
+    <meta name="keywords" content="تخت خواب ، کابینت ، نقاشی ، کمد دیواری">
+    <!-- <link rel="stylesheet" media="screen and (max-width:1003px)" href="style/mobile.css"> -->
+    <title>AK-HOMEDECORATION</title>
+    <style>
+        @font-face {
+            font-family: 'Esttedad';
+            src: url("Estedad-Regular.ttf");
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Esttedad;
+            box-sizing: border-box;
+        }
+
+        body {
+            direction: rtl;
+            background-image: url("12.jpg");
+        }
+
+        header {
+            background-color: #262626;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .nav-branding {
+            font-size: 2rem;
+            color: #fbc100;
+            position: absolute;
+            left: 1rem;
+        }
+
+        .nav-link {
+            transition: 0.7s ease;
+            color: #fbc100;
+        }
+
+        .nav-link:hover {
+            padding: 1rem;
+            background-color: #fbc100;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+        }
+
+        #active {
+            padding: 1rem;
+            color: #f5f5f5;
+            background-color: #fbc100;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            margin: 2vh 1vw;
+        }
+
+        .image2,
+        .image1,
+        .image3,
+        .image4,
+        .image5,
+        .image6,
+        .image9,
+        .image8 {
+            padding: 1rem;
+        }
+
+        img[src="1.png"] {
+            width: 30rem;
+            padding: 2rem;
+        }
+
+        img[src="2.png"] {
+            border-radius: 15px;
+            width: 30rem;
+        }
+
+        img[src="3.png"] {
+            border-radius: 15px;
+            width: 30rem;
+        }
+
+        img[src="4.png"] {
+            width: 30rem;
+            border-radius: 15px;
+        }
+
+        img[src="5.png"] {
+            width: 30rem;
+            border-radius: 15px;
+        }
+
+        img[src="6.png"] {
+            border-radius: 15px;
+            width: 30rem;
+        }
+
+        img[src="7.png"] {
+            width: 30rem;
+            border-radius: 15px;
+        }
+
+        img[src="8.png"] {
+            border-radius: 15px;
+            width: 30rem;
+        }
+
+        .text1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            line-height: 5vh;
+            /* padding: 0 2rem; */
+        }
+
+        .orderclass2,
+        .orderclass4,
+        .orderclass6,
+        .orderclass8 {
+            order: 2;
+        }
+
+        .orderclass1,
+        .orderclass2,
+        .orderclass3,
+        .orderclass4,
+        .orderclass5,
+        .orderclass6,
+        .orderclass7,
+        .orderclass8 {
+            flex: 3;
+        }
+
+        p {
+            display: block;
+        }
+
+        @media(max-width:1015px) {
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background-color: #262626;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+            }
+
+            .nav-item {
+                margin: 16px 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .container {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            img[src="1.png"] {
+                width: 100%;
+                padding: 0;
+            }
+
+            img[src="2.png"] {
+                width: 100%;
+            }
+
+            img[src="3.png"] {
+                width: 100%;
+            }
+
+            img[src="4.png"] {
+                width: 100%;
+            }
+
+            img[src="5.png"] {
+                width: 100%;
+            }
+
+            img[src="6.png"] {
+                width: 100%;
+            }
+
+            img[src="7.png"] {
+                width: 100%;
+            }
+
+            img[src="8.png"] {
+                width: 100%;
+            }
+
+            .text1 {
+                order: 2;
+                 padding: 0px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 p class="nav-branding"><strong>آک هوم دکوراسیون</strong></h1>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" id="active" class="nav-link"><i class="bi bi-house"></i>&nbsp;خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-person"></i>&nbsp;رزومه</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Products.html" class="nav-link"><i class="bi bi-folder2-open"></i>&nbsp;محصولات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-folder2-open"></i>&nbsp;خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-telephone"></i>&nbsp;ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-person"></i>&nbsp;درباره ما</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <aside class="text1 orderclass1">
+                <p>سلام
+                    من و مجموعه‌ی AK HOME اینجا هستیم تا با کلی ایده‌ی نو تو طراحی داخلی خونه‌هاتون بهتون کمک کنیم
+                    <strong>من علی اسلامی‌خواه</strong> هستم
+                </p>
+                <p></p>
+            </aside>
+            <aside class="image1">
+                <img src="1.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass2">
+                <p><strong>محصولات</strong></p>
+                <p>
+                    امروزه با توجه به آپارتمان نشینی و کوچک شدن ابعاد خانه و ب طبع آن کمتر شدن فضای قابل استفاده در
+                    منازل ، راهکارهای متنوعی در جهت استفاده بهینه از فضای خانه به کار گرفته می شود .
+                    تخت خواب کمجا ( تخت خواب جکی و یا تخت خواب تاشو) یکی از این روشهاست که برای استفاده هرچه بهتر از
+                    فضای اتاق خواب طراحی شده است ، لذا گروه تولیدی آک هوم مفتخر است که با طراحی و تولید این کالا مطابق
+                    نیاز شما با طرح و ابعاد دلخواهتان و همچنین با کلیه ی خدمات پس از فروش ؛ جایی در خانه ی پر مهر شما
+                    داراست .
+
+                </p>
+                <ul>
+                    <li> 🚩 ده سال گارانتی محصولات</li>
+                    <li> 🚩 قابلیت ارسال کالا به سراسر کشور </li>
+                </ul>
+
+                <p> 🟠 مجموعه دکوراسیون داخلی آک هوم
+                    از سال 1395 با محوریت تولید محصولات کمجا جهت رفاه حال شما
+                    تاسیس گردید .
+                </p>
+
+
+                <p> (( با سپاس از حسن انتخاب شما
+                    <strong>مجموعه‌ی دکوراسیون داخلی آک هوم</strong> ))</p>
+            </aside>
+            <aside class="image2">
+                <img src="2.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass3">
+                <p> <strong>سرویس خواب</strong> های <strong> کمجا</strong> <strong> تاشو</strong>
+                    ( نوجوان ، تک نفره ، دونفره و ...)</p>
+            </aside>
+            <aside class="image3">
+                <img src="3.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass4">
+                <p><strong>کابینت</strong>&nbsp;<strong>آشپزخانه</strong> و <strong>کمد‌ دیواری</strong></p>
+                <p>
+                    <strong>مدرن</strong> (MDF و انواع هایگلس)
+                    <strong>کلاسیک</strong> ( ممبران ، وکیوم ، چوب و ...) 
+                    <strong>نئوکلاسیک</strong> ( رنگ ، پلو‌اورتان و ...) </p>
+            </aside>
+            <aside class="image4">
+                <img src="4.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass5">
+                <p><strong>کناف</strong> ( انواع طرحهای ساده ، اتوبوسی ، کرو و ...)</p>
+            </aside>
+            <aside class="image5">
+                <img src="5.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass6">
+                <p><strong>درب ضد سرقت</strong> و اتاقی</p>
+            </aside>
+            <aside class="image6">
+                <img src="6.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass7">
+                <p> <strong>نقاشی</strong> <strong>رنگ آمیزی</strong> و
+                    انواع رنگ  و <strong>پتینه کاری</strong>   و   ...</p>
+            </aside>
+            <aside class="image9">
+                <img src="7.png" />
+            </aside>
+        </section>
+
+        <section class="container">
+            <aside class="text1 orderclass8">
+                <p><strong> درب و پنجره دوجداره</strong> و <strong>چند جداره‌ی</strong> و <strong>UPVC</strong></p>
+            </aside>
+            <aside class="image8">
+                <img src="8.png" />
+            </aside>
+        </section>
+    </main>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+    </script>
+</body>
+
+</html>
